@@ -9,10 +9,10 @@ export default function App() {
   const { books, hasMore, loading, error } = useBookSearch(query, pageNumber);
 
   // 🔹 Add Debugging Logs to Check Data
-  console.log('📚 Books:', books);
-  console.log('🔄 Loading:', loading);
-  console.log('⚠️ Error:', error);
-  console.log('📖 Has More:', hasMore);
+  console.log(' Books:', books);
+  console.log(' Loading:', loading);
+  console.log(' Error:', error);
+  console.log(' Has More:', hasMore);
 
   const observer = useRef();
   const lastBookElementRef = useCallback(
@@ -21,7 +21,7 @@ export default function App() {
       if (observer.current) observer.current.disconnect();
       observer.current = new IntersectionObserver((entries) => {
         if (entries[0].isIntersecting && hasMore) {
-          console.log('🔄 Fetching more books...');
+          console.log('Fetching more books...');
           setPageNumber((prevPageNumber) => prevPageNumber + 1);
         }
       });
@@ -56,8 +56,8 @@ export default function App() {
         <p>🔍 No books found.</p>
       )}
       
-      <div>{loading && '⏳ Loading...'}</div>
-      <div>{error && '❌ Error fetching books'}</div>
+      <div>{loading && ' Loading...'}</div>
+      <div>{error && ' Error fetching books'}</div>
     </>
   );
 }
