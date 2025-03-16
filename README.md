@@ -1,18 +1,1 @@
-A React app with infinite scrolling, dynamically loading data as users scroll.
-
-## Available Scripts
-
-Run these commands in the project directory:
-
-npm start → Runs the app in development mode at http://localhost:3000/
-npm test → Launches the test runner
-npm run build → Builds the app for production
-npm run eject → Exposes configuration files (irreversible)
-Features
-✔ Infinite scrolling for seamless user experience
-✔ Optimized API calls & loading indicator
-✔ Handles errors gracefully
-
-Future Enhancements
- Dark Mode
- UI/UX improvements
+This project is a React-based infinite scrolling book search application. It dynamically loads book titles as the user scrolls, using the Intersection Observer API to detect when the last item is visible and fetch more data. The application fetches books based on a search query and supports pagination by increasing the page number when needed. It includes loading and error handling to improve the user experience. The project can be improved by implementing virtualized lists, cursor-based pagination, and AI-powered prefetching for better performance.
